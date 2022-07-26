@@ -1,0 +1,109 @@
+.main_hero {
+    background: radial-gradient(#151515, #191919);
+}
+
+.Bearbingonft {
+    position: relative;
+} 
+
+.Bearbingonft img {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-items: center; 
+  width: 100%;
+}
+
+
+.herosbox .Bearbingonft::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(220deg, #eb2a2a, #ef9424);
+    margin: auto;
+    z-index: 0;
+    border: 2rem solid #242424;
+  }
+  
+  .herosbox .Bearbingonft::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: linear-gradient(220deg, #ed840100, #f9008d00);
+    margin: auto;
+    z-index: 0;
+    border: 2.5rem double #ef2424;
+    animation: ripple 2.5s ease-out infinite;
+  }
+  
+  
+  @keyframes ripple {
+  
+    0%,
+    35% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 1;
+    }
+  
+    50% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  
+  @-webkit-keyframes ripple {
+  
+    0%,
+    35% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 1;
+    }
+  
+    50% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  
+
+  @media only screen and (max-width: 425px) {
+    .herosbox .Bearbingonft::before { 
+        width: 250px;
+        height: 250px;
+        border: 1rem solid #242424;
+    }
+    .herosbox .Bearbingonft::after { 
+        width: 210px;
+        height: 210px;
+    }
+
+  }
+ 
