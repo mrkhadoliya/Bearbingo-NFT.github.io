@@ -30,8 +30,8 @@ const NavBar = ({ setTheme }) => {
       {/* TOGGLE HIDE/SHOW FOR MOBILE */}
       <StyledDropdown onClick={toggleDropdown} isVisible={showDropdown}>
         <StyledNavMenu>
-          <li><StyledNavButton to="/">Home</StyledNavButton></li>
-          <li><StyledNavButton to="/mint">Mint</StyledNavButton></li>
+          {/* <li><StyledNavButton to="/">Home</StyledNavButton></li>
+          <li><StyledNavButton to="/mint">Mint</StyledNavButton></li> */}
         </StyledNavMenu>
 
         <StyledConnect>

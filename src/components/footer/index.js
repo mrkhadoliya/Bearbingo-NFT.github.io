@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <StyledFooter>
       <strong>Copyright &copy; 2022 Bearbingo.io </strong>
 
-      <Link to="/terms">Terms of Service</Link>
+      {/* <Link to="/terms">Terms of Service</Link> */}
     </StyledFooter>
   )
 }

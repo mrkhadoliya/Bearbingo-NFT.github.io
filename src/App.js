@@ -28,9 +28,9 @@ export default function App() {
         <GlobalStyles /> 
         <Router>
           <Routes>
-            <Route path="/" element={<Home setTheme={setTheme} />} />
-            <Route path="/mint" element={<Mint setTheme={setTheme} />} />
-            <Route path="/terms" element={<Terms setTheme={setTheme} />} />
+            {/* <Route path="/" element={<Home setTheme={setTheme} />} /> */}
+            <Route path="/" element={<Mint setTheme={setTheme} />} />
+            {/* <Route path="/terms" element={<Terms setTheme={setTheme} />} /> */}
           </Routes>
         </Router>
       </ThemeProvider>
