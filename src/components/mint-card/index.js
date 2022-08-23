@@ -9,7 +9,7 @@ import { formatNumber } from "../../utils/helpers";
 import { useAccount } from "wagmi";
 
 import Button from "../button";
-import PublicBanner from "../../assets/images/graphics/mint-banner-public.png";
+import PublicBanner from "../../assets/images/nfts/nft-6.jpg";
 
 const nftContractArguments = {
   addressOrName: CONTRACTS.NFT,

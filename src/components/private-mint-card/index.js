@@ -11,7 +11,7 @@ import { useAccount } from "wagmi";
 
 // COMPONENTS
 import Button from "../button";
-import PrivateBanner from "../../assets/images/graphics/mint-banner-private.png";
+import PrivateBanner from "../../assets/images/nfts/nft-5.jpg";
 
 const PrivateMintCard = ({
   setAlert,
