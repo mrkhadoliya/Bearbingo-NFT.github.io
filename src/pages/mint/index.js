@@ -4,7 +4,7 @@ import styled, {useTheme}  from 'styled-components';
 // COMPONENTS
 import DefaultLayout from "../../layouts/default";
 import MintCard from "../../components/mint-card";
-import PrivateMintCard from "../../components/private-mint-card";
+// import PrivateMintCard from "../../components/private-mint-card";
 import Stats from "../../components/stats";
 import Alert from "../../components/alert";
 import Collection from "../../components/collection";
@@ -45,17 +45,18 @@ const Mint = ({setTheme}) => {
 
       <StyledShowcase className='mintbgimg' id="hero">      
         <div className="grid">
-          <div className="col-6_sm-12">
-            <PrivateMintCard setAlert={setAlert} />
+          <div className="col-5_sm-12">
+            <MintCard setAlert={setAlert} />
+            {/*<PrivateMintCard setAlert={setAlert} />*/}
           </div>
 
-          <div className="col-6_sm-12">
-            <MintCard setAlert={setAlert} />
+          <div className="col-7_sm-12">
+          <Stats />
           </div>
         </div>
       </StyledShowcase>
       
-      <Stats />
+      
       
       <Collection />
     </DefaultLayout>
@@ -63,7 +64,7 @@ const Mint = ({setTheme}) => {
 }
 
 const StyledShowcase = styled.header`
-  padding: 40px 80px;
+  padding: 8rem 80px;
   box-shadow: inset ${props => props.theme.shadow.medium};
 
   @media only screen and (max-width: ${props => props.theme.mobile.phone}) {

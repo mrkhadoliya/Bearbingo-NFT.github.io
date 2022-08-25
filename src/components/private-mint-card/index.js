@@ -11,7 +11,7 @@ import { useAccount } from "wagmi";
 
 // COMPONENTS
 import Button from "../button";
-import PrivateBanner from "../../assets/images/graphics/mint-banner-private.png";
+import PrivateBanner from "../../assets/images/nfts/nft-5.jpg";
 
 const PrivateMintCard = ({
   setAlert,
@@ -106,11 +106,11 @@ const PrivateMintCard = ({
   return (
     <StyledPrivateMintCard>
       <div className="grid">
-        <div className="col-5_sm-12">
-        <header style={{ backgroundImage: `url(${PrivateBanner})` }}></header>
+        {/*<div className="col-5_sm-12">
+          <header style={{ backgroundImage: `url(${PrivateBanner})` }}></header>
       
-        </div>
-        <div className="col-7_sm-12">
+  </div>*/}
+        <div className="col-12_sm-12">
           <section>
             <h4>Private Mint</h4>
             <h3>Bearbingo Whitelist Collection</h3>
@@ -167,8 +167,9 @@ const StyledPrivateMintCard = styled.div`
   box-shadow: ${props => props.theme.shadow.large};
   border-radius: 16px;
   color: ${props => props.theme.color};
-  margin: 24px;
+  margin: 10px;
   overflow: hidden;
+  position: relative;
 
   @media only screen and (max-width: ${props => props.theme.mobile.phone}) {
     margin: 0 0 24px 0;
@@ -185,7 +186,7 @@ const StyledPrivateMintCard = styled.div`
   }
 
   section {
-    padding: 24px 24px 24px 0;
+    padding: 24px 24px 0;
 
     @media only screen and (max-width: ${props => props.theme.mobile.phone}) {
       padding: 16px;
@@ -206,7 +207,7 @@ const StyledPrivateMintCard = styled.div`
     font-size: 22px;
     font-weight: 900;
     line-height: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 
     @media only screen and (max-width: ${props => props.theme.mobile.phone}) {
       font-size: 24px;
