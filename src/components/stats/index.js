@@ -56,22 +56,22 @@ const Stats = () => {
       <tbody>
         <tr>
           <td>
-            <div style={{ background: 'rgba(0, 127, 255, 0.1)', padding: '6px', borderRadius: '50px', border: '1px solid rgb(0, 127, 255)' }}>
+            <div style={{ background: 'rgba(0, 127, 255, 0.1)', padding: '6px', borderRadius: '4px',}}>
               {formatNumber(owned)}
             </div>
           </td>
           <td>
-            <div style={{ background: 'rgba(255, 80, 95, 0.1)', padding: '6px', borderRadius: '50px', border: '1px solid rgb(255, 80, 95)' }}>
+            <div style={{ background: 'rgba(255, 80, 95, 0.1)', padding: '6px', borderRadius: '4px',}}>
               {formatNumber(minted)}
             </div>
           </td>
           <td>
-            <div style={{ background: 'rgba(222, 165, 0, 0.1)', padding: '6px', borderRadius: '50px', border: '1px solid rgb(209, 142, 0)' }}>
+            <div style={{ background: 'rgba(222, 165, 0, 0.1)', padding: '6px', borderRadius: '4px',}}>
               {formatNumber(remaining)}
             </div>
           </td>
           <td>
-            <div style={{ background: 'rgba(33, 204, 102, 0.1)', padding: '6px', borderRadius: '50px', border: '1px solid rgb(33, 204, 102)' }}>
+            <div style={{ background: 'rgba(33, 204, 102, 0.1)', padding: '6px', borderRadius: '4px',}}>
               {formatNumber(supply)}
             </div>
           </td>
@@ -82,11 +82,15 @@ const Stats = () => {
 }
 
 const StyledStatsBar = styled.table`
-  border-bottom: 1px solid ${props => props.theme.border};
-  border: 1px solid ${props => props.theme.border};
+  // border-bottom: 1px solid ${props => props.theme.border};}
+  // border: 1px solid ${props => props.theme.border};
+  background: ${props => props.theme.name === "light" ? props.theme.background : props.theme.backgroundTertiary};
   box-sizing: border-box;
   text-align: center;
   width: 100%; 
+  position: relative;
+  border-radius:12px;
+  margin-top: 13px;
 
   th {
     background: ${props => props.theme.backgroundSecondary};
@@ -95,6 +99,8 @@ const StyledStatsBar = styled.table`
     font-weight: bold;
     padding: 20px 32px;
     text-transform: uppercase;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 
     @media only screen and (max-width: ${props => props.theme.mobile.phone}) {
       font-size: 11px;
@@ -105,7 +111,7 @@ const StyledStatsBar = styled.table`
     color: ${props => props.theme.color};
     padding: 24px 32px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: bold; 
 
     em {
       background-color: ${props => props.theme.swatch.greenLight};

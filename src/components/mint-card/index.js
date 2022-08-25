@@ -86,7 +86,7 @@ const MintCard = ({
   return (
     <StyledMintCard>
       <div className="grid">
-        <div className="col-7_sm-12">
+        <div className="col-12_sm-12">
           <section>
             <h4>Public Mint</h4>
             <h3>Bearbingo Strawhat Collection</h3>
@@ -113,9 +113,9 @@ const MintCard = ({
           </section>
 
         </div>
-        <div className="col-5_sm-12">
+        {/*<div className="col-5_sm-12">
           <header style={{ backgroundImage: `url(${PublicBanner})` }}></header>
-        </div>
+  </div>*/}
       </div>
       
       
@@ -129,8 +129,9 @@ const StyledMintCard = styled.div`
   box-shadow: ${props => props.theme.shadow.large};
   border-radius: 16px;
   color: ${props => props.theme.color};
-  margin: 24px;
+  margin: 10px;
   overflow: hidden;
+  position: relative;
 
   @media only screen and (max-width: ${props => props.theme.mobile.phone}) {
     margin: 0 0 8px 0;
@@ -147,8 +148,7 @@ const StyledMintCard = styled.div`
   }
 
   section {
-    padding: 24px 0 24px 24px;
-
+    padding: 24px 24px 0; 
     @media only screen and (max-width: ${props => props.theme.mobile.phone}) {
       padding: 16px;
     }
@@ -168,7 +168,7 @@ const StyledMintCard = styled.div`
     font-size: 22px;
     font-weight: 900;
     line-height: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 
     @media only screen and (max-width: ${props => props.theme.mobile.phone}) {
       font-size: 24px;
