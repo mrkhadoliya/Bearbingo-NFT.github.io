@@ -71,9 +71,9 @@ const MintCard = ({
     if (quantity >= 1) {
       write({
         args: [quantity],
-        overrides: {
-          value: window.BigInt(Number(mintFee) * quantity),
-        },
+        // overrides: {
+        //   value: window.BigInt(Number(0) * quantity),
+        // },
       });
     }
   }
@@ -94,20 +94,20 @@ const MintCard = ({
             <form>
               <label>
                 <span>Select Quanity to Purchase</span>
-                <em>Cost: {price} Eth</em>
+                {/* <em>Cost: {price} Eth</em> */}
               </label>
 
               <select value={quantity} onChange={onSelectQuantity}>
                 <option value="1">1 NFTs</option>
                 <option value="2">2 NFTs</option>
-                <option value="3">3 NFTs</option>
+                {/* <option value="3">3 NFTs</option> 
                 <option value="4">4 NFTs</option>
                 <option value="5">5 NFTs</option>
                 <option value="6">6 NFTs</option>
                 <option value="7">7 NFTs</option>
                 <option value="8">8 NFTs</option>
                 <option value="9">9 NFTs</option>
-                <option value="10">10 NFTs</option>
+                <option value="10">10 NFTs</option> */}
               </select>
             </form>
           </section>
